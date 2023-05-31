@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/app.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm install && tsc",
     "linterna": "npx eslint .",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "start": "npm install && node build/app.js",
