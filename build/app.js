@@ -15,7 +15,7 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 const corsOptions = {
-    origin: 'https://petcheck.com.ar/',
+    origin: 'https://petcheck.com.ar',
 };
 //Middlewares
 app.use(express_1.default.json());

@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: 'https://petcheck.com.ar/',
+  origin: 'https://petcheck.com.ar',
 };
 
 //Middlewares
