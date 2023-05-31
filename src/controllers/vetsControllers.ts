@@ -1,17 +1,14 @@
 import { Request, Response } from 'express';
 import Usuario from '../models/usuarios';
 
-export async function GetAll(res: Response){
+export async function GetAll(req: Request, res: Response){
     try{
-        const doc = Usuario.find({})
-        .exec().then(doc =>{
-            console.log(doc)
-            res.json(doc)
-        })
-        //la promesa me queda pendiente, no se resuelve
+        console.log(req)
+        const doc = await Usuario.find({}).exec()
+        res.json(doc).status(200).send('Se mando todo')
     }
-    catch(error){
-        console.log(error)
-        res.status(500).send({error: 'No se pudo obtener datos'})
+    catch (error) {
+        console.log(error);
+        res.send({ error: 'No se pudo obtener datos' });
     }
 }
