@@ -14,19 +14,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetAll = void 0;
 const usuarios_1 = __importDefault(require("../models/usuarios"));
-function GetAll(res) {
+function GetAll(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const doc = usuarios_1.default.find({})
-                .exec().then(doc => {
-                console.log(doc);
-                res.json(doc);
-            });
-            //la promesa me queda pendiente, no se resuelve
+            console.log(req);
+            const doc = yield usuarios_1.default.find({}).exec();
+            res.json(doc).status(200).send('Se mando todo');
         }
         catch (error) {
             console.log(error);
-            res.status(500).send({ error: 'No se pudo obtener datos' });
+            res.send({ error: 'No se pudo obtener datos' });
         }
     });
 }
