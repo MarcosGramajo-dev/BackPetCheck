@@ -20,7 +20,6 @@ const corsOptions = {
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors(corsOptions)); //configurar bien esto
-app.options('*', cors());
 app.use(helmet()); //revisar parametros para agregar
 
 //Routes

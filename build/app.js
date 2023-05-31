@@ -21,7 +21,6 @@ const corsOptions = {
 app.use(express_1.default.json());
 app.use((0, morgan_1.default)('dev'));
 app.use((0, cors_1.default)(corsOptions)); //configurar bien esto
-app.options('*', (0, cors_1.default)());
 app.use((0, helmet_1.default)()); //revisar parametros para agregar
 //Routes
 app.post('/regTest', (req, res) => {
