@@ -3,9 +3,9 @@ import Usuario from '../models/usuarios';
 
 export async function GetAll(req: Request, res: Response){
     try{
-        console.log(req)
+        //console.log(req)
         const doc = await Usuario.find({}).exec()
-        res.json(doc).status(200).send('Se mando todo')
+        res.status(200).json({ data: doc, message: 'Se enviaron todos los datos' })
     }
     catch (error) {
         console.log(error);

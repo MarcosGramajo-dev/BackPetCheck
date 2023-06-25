@@ -13,13 +13,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: 'https://petcheck.com.ar',
+  origin: 'http://localhost:5173',
 };
 
 //Middlewares
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors(corsOptions)); //configurar bien esto
+// app.use(cors()); //configurar bien esto
 app.use(helmet()); //revisar parametros para agregar
 
 //Routes

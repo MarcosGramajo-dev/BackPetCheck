@@ -21,6 +21,40 @@ export type IVet = {
   }
 };
 
+export type History = {
+  Vacunas: [{
+    Certification: number,
+    DataVacuna: string,
+    Vacuna: string,
+    fecha: string,
+    nameAndMatricule: string
+  }],
+  Registros: [{
+    Info: string,
+    Registro: string,
+    fecha: string
+  }],
+  DataPet: {
+      image: string,
+      NombreMascota: string,
+      Especie: string,
+      Sexo: string,
+      Nchip: number,
+      Pedigree: number,
+      Date: string,
+      detalles: string
+  },
+  ownerPet: {
+      NombreDueño: string,
+      DNI: number,
+      Telefono: number,
+      Direccion: string,
+      province: string,
+      departament: string
+  },
+  id: number
+}
+
 declare global {
   namespace Express {
     // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
@@ -29,5 +63,7 @@ declare global {
     }
   }
 }
+
+
 
 // export {};
