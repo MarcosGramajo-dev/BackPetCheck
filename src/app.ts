@@ -1,6 +1,6 @@
 import express from 'express';
 import login from './routes/authRoutes';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
 import './DB';
@@ -17,7 +17,7 @@ app.use(cors({ origin: 'https://petcheck.com.ar' }));
 app.use(express.json());
 app.use(morgan('dev'));
 // app.use(cors()); //configurar bien esto
-app.use(helmet()); //revisar parametros para agregar
+// app.use(helmet()); //revisar parametros para agregar
 
 //Routes
 
