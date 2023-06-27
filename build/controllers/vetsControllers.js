@@ -19,7 +19,7 @@ function GetAll(req, res) {
         try {
             console.log(req);
             const doc = yield usuarios_1.default.find({}).exec();
-            res.json(doc).status(200).send('Se mando todo');
+            res.status(200).json(doc);
         }
         catch (error) {
             console.log(error);

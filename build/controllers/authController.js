@@ -42,6 +42,7 @@ function signUp(req, res) {
                     facebook: req.body.vet.facebook
                 }
             });
+            console.log(veterinaria);
             const verificacionEmail = yield usuarios_1.default.findOne({ email: veterinaria.email }).then(doc => {
                 if (doc) {
                     res.send("El Email ya esta en uso!");
