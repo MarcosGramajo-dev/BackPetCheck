@@ -5,8 +5,8 @@ const router = Router();
 
 router.get('/', GetAll);
 
-router.get('/HistoryClinic/id/:id', findHC);
-router.get('/HistoryClinic/dni/:id', findHCByDni);
-router.get('/HistoryClinic/nchip/:id', findHCByNchip);
+router.get('HistoryClinic/id/:id', findHC);
+router.get('HistoryClinic/dni/:id', findHCByDni);
+router.get('HistoryClinic/nchip/:id', findHCByNchip);
 
 export default router;
